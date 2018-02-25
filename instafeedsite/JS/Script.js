@@ -8,13 +8,27 @@
 //});
 //feed.run();
            var imgPaths = [
-               ['./Assets/layer5.png',400],
-               ['./Assets/flicker.png',300]];
+               ['./assets/layer5.png',400],
+               ['./assets/flicker.png',300]];
            var imgO = new Array();
            var currImg = 0;
            var currDispTime = imgPaths[0][1];
            var siteWidth = 1920;
            var scale = screen.width /siteWidth
+		   var options = {
+  "animate": true,
+  "patternWidth": 122.34,
+  "patternHeight": 293.8,
+  "grainOpacity": 0.2,
+  "grainDensity": 1.22,
+  "grainWidth": 1,
+  "grainHeight": 1.22
+}
+grained("#container", options);
+
+/*
+background-color :rgb(204, 204, 204)
+*/
 
 document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
 
@@ -36,3 +50,5 @@ document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='
                imgObj.src = imgO[currImg].src;
                swapImg();
            }
+
+		   
